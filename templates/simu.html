@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="{{ url_for('static', filename='js/app.js') }}"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title> Etape 1: Uploader le fichier Revit</title>
+    <link rel="stylesheet" href="../static/css/etape2.css">
+    <link rel="stylesheet" href="../static/css/headerfooter.css">
+
+</head>
+<body>
+    <nav class="menu-bar">
+        <ul>
+            <img src="{{ url_for('static', filename='img/logoZeroc.png')}}" style="width: 40px; height: 25px"> <p class="logo"> ZEROC</p>
+            <li><a id = "/Zeroc" href = "Zeroc.html">Accueil</a></li>
+            <li><a href = "simu.html">Lancer une simulation</a></li>
+            <li><a id = "/infos" href = "infos.html">Qui sommes-nous ?</a></li>
+            <li><p> <img src="{{ url_for('static', filename='img/utilisateur.png')}}" style="height:20px; width: 20px">Connexion</p></li>
+        </ul>
+    </nav>
+    <br><br><br><br><br>
+    <main>
+        <div class="titre1" >
+            <h1> Etape 1: Uploadez votre fichier Revit</h1>
+        </div>
+        <br><br>
+        <div class="texte">
+            <p> Pour utiliser les données de votre fichier Revit, il faut que vous ayez au préalable converti votre fichier au format IFC. Pour cela, il vous suffit d'ouvrir votre fichier sur Revit puis d'aller dans Fichier > Exporter> IFC. 
+                <br><br>Si vous avez des difficultés nous vous invitons à consulter <a href="https://www.autodesk.fr/campaigns/interoperability/ifc-guide">ce site.</a> </p> <br>
+        </div>
+        div class="bouton">
+            button> input type="file" accept=".ifc" hidden> Uploadez mon fichier Revit/button>
+        /div>
+        
+        <br>
+
+        <h1>Résultats de la simulation</h1>
+        <p id="result_placeholder">Résultats :</p>
+        <button id="calculate_exp_button">Lancer le calcul</button>
+
+        <script>
+            document.getElementById("calculate_exp_button").addEventListener("click", function () {
+                fetch('/tasks/calculate_exp_result', { method: 'POST' })
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById("result_placeholder").innerText = `Result: ${data.status}`;
+                    });
+            });
+        </script>
+        
+        <br>  
+        <div class="fichier">
+            <label for="input-file" id="drop-area">
+                <form action="/tasks/upload" method="POST" enctype="multipart/form-data">
+                    <input name="ifcfile" type="file" accept=".ifc" id="input-file"/>
+                    <input type="submit"/>
+                        <div id="doc-view">
+                            <img src="{{ url_for('static', filename='img/icone.png')}}" style="width: 100px; height:100px; border-radius: 50%;">    
+                            <p> Drag and drop or click here <br> to upload file</p>
+                            <span id="file-name"> Upload any IFC file form desktop</span>
+                        </div>
+                <form/>
+            </label>
+        </div>
+        <br>
+        <br>
+        <div class="etape2">
+            <button><a href="etape2.html"> Passer à l'étape 2 <i class="arrow right"></i>
+                <i class="arrow right"></i>
+                <i class="arrow right"></i></a></button>
+        </div>
+
+        <script src="../scripts/FileSaver.min.js"></script>
+        <script src="../scripts/etape1.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <br> <br><br> <br><br> <br><br> <br><br> <br><br> <br>
+    </main>
+</body>
+
+<footer>
+    <div class="container">
+        <div class="blockgauche">
+            <p class="titrefooter"> PROJET ZEROC</p> <br>
+            <a href="/templates/infos.html"> Qui sommes-nous?</a>
+            <a href="/templates/forum.html"> Forum</a>
+            <a href="/templates/blog.html"> Blog</a>
+            <br> <br>  
+        </div>
+        <div class="séparation">
+            <p>.</p>
+        </div>
+        <div class="blockmilieu">
+            <p class="titrefooter"> EN PLUS</p> <br>
+            <a href="/templates/mentionslegales.html"> Mentions légales</a>
+            <a href="/templates/conditions.html"> Conditions générales d'utilisation</a>
+            <a href="/templates/protectiondonnees.html"> Politique de protection des données personnelles</a>
+            <a href="/templates/cookies.html"> Cookies</a> 
+            <a href="/templates/donneesperso.html"> Données personnelles</a> 
+            <a href="/templates/conditionscompte.html"> Conditions générales d'utilisation du compte</a> 
+            <a href="/templates/publicité.html"> publicité</a> <br>  
+        </div>
+        <div class="séparation">
+            <p>.</p>
+        </div>
+        <div class="blockdroite">
+            <p class="titrefooter"> CONTACT</p><br>
+            <img src="{{ url_for('static', filename='img/mail.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="{{ url_for('static', filename='img/logofacebook.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="{{ url_for('static', filename='img/logoinstagram.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="{{ url_for('static', filename='img/logotwitter.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <p> FAQ</p>
+        </div>
+    </div>
+</footer>
+</html>

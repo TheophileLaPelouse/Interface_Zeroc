@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <style> #map { height: 500px; }</style>  
+</head>
+<body>
+    <h1> ZEROC </h1>
+    <div id="map"></div>
+</body>
+<script>
+   
+    fetch('adresses.json')
+.then(function(response) {
+  return response.json(); // Convertit le contenu du fichier JSON en tableau JavaScript
+})
+.then(function(addresses) {
+  var map = L.map('map').setView([50.633333, 3.066667], 10); // Centrer la carte arbitrairement
+
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+
+  addresses.forEach(function(address) {
+    // Remplacer par l'URL de votre API de géocodage préférée
+    var geocodingUrl = `https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(address)}`;
+
+
+    fetch(geocodingUrl)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(geocodeData) {
+      if (geocodeData.length > 0) {
+        var latLng = [geocodeData[0].lat, geocodeData[0].lon];
+        L.marker(latLng).addTo(map).bindPopup(address);
+      } else {
+        console.log('Géocodage échoué pour l\'adresse:', address);
+      }
+    })
+    .catch(function(error) {
+      console.error('Erreur lors du géocodage:', error);
+    });
+  });
+})
+.catch(function(error) {
+  console.error('Erreur lors de la récupération des adresses:', error);
+});
+
+
+
+
+</script>
+</html>
+

@@ -1,0 +1,54 @@
+
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-weight:520;
+}
+
+
+#zipcode-form {
+    text-align: center;
+}
+#result {
+    text-align: center;
+}
+
+.imagelocalisation {
+    text-align: center;
+}
+
+.boutonetape3 {
+    text-align: center;
+}
+
+.boutonetape3 button {
+    background-color: rgb(162, 142, 250);
+    margin: auto;
+    border: 1px black solid;
+}
+
+.boutonetape3 a {
+    text-align: center;
+    color:white;
+    padding: 20px;
+    margin: 40px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.boutonetape3 button:hover {
+    background-color: rgb(104, 45, 252);
+}
+
+.arrow {
+    border: solid rgb(255, 255, 255);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }

@@ -1,0 +1,266 @@
+
+*{
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les rembourrages par défaut */
+}
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: "Calibri-Light", Arial, sans-serif;
+}
+
+.menu-bar {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+    align-items: center;
+}
+
+.menu-bar ul {
+    list-style: none;
+    padding: 0;
+    display: flex; 
+    color: rgb(255, 255, 255);
+    margin: 10px;
+}
+
+.menu-bar ul li {
+    display: block;
+    padding: 5px 10px; 
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menu-bar ul li:last-child {
+    margin-right: 20px; 
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar ul li p {
+    margin: 0; 
+    display: flex;
+    align-items: center;
+    
+}
+
+.menu-bar ul li img {
+    margin-right: 5px; 
+    height: 20px;
+    width: 20px;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+
+.menu-bar ul li:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+.logo {
+    font-size: 1.3em;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+
+h1 {
+    font-size: 3em;
+    font-weight: 520;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    
+}
+
+p {
+    margin-left: 0;
+}
+.source {
+    text-align: center;
+}
+.construction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.texte {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: auto;
+}
+
+.button a {
+    text-decoration: none;
+}
+
+
+
+span {
+    text-decoration: none;
+}
+
+span:hover {
+    text-decoration: underline; 
+    color: rgb(144, 0, 255); 
+}
+
+em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+div {
+    margin: auto;
+}
+
+.enfer{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    background-color: blanchedalmond;
+    
+}
+
+.etape {
+    justify-content: center;
+    height: 400px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+.titre {
+    display:block;
+    width: 250px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right:20px;
+    margin-bottom: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+
+.image {
+    display: block;
+    max-width: 250px;
+    max-height: 230px;
+    border: 1px solid;
+    border-radius: 10%;
+    margin: 20px;
+}
+
+
+
+.texteimage {
+    display:block;
+    width: 250px;
+    margin-left: 20px;
+    margin-right:20px;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.video {
+    display:block;
+    margin: auto;
+}
+
+.button {
+    display: block;
+    margin: auto;
+    padding: 5px;
+}
+
+footer {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.669);
+    padding: 0;
+    margin: 0;
+    
+}
+.container {
+    display:flex;
+    justify-content:space-around;
+    align-items:baseline;
+    margin: 0;
+    padding: 0;
+}
+
+
+footer a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  
+}
+
+.titrefooter {
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+
+.séparation {
+    padding: 0;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    display: block;
+    border-right: rgb(255, 255, 255) solid 0.5px;
+    color:#000000;
+    height: 100px;
+}
+
+
+.aide img {
+    margin-right: 15px;
+}
+
+.blockgauche {
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    justify-content: baseline;
+    width: 10%;
+}
+
+.blockmilieu {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    width: 45%;
+    padding: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+
+}
+
+.blockdroite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    justify-content: baseline;
+    width: 20%;
+    padding: 0;
+    padding-top: 20px;
+}
+
+.blockdroite img {
+    padding: 5px;
+}

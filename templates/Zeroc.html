@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Zeroc </title>
+    <link rel="stylesheet" href="../static/css/Zeroc.css">
+   
+</head>
+
+<body>
+    <nav class="menu-bar">
+        <ul>
+            <img src="{{ url_for('static', filename='img/logoZeroc.png')}}" style="width: 40px; height: 25px"> <p class="logo"> ZEROC</p>
+            <li><a id = "/Zeroc" href = "Zeroc.html">Accueil</a></li>
+            <li><a href = "simu.html">Lancer une simulation</a></li>
+            <li><a id = "/infos" href = "infos.html">Qui sommes-nous ?</a></li>
+            <li><p> <img src="{{ url_for('static', filename='img/utilisateur.png')}}" style="height:20px; width: 20px">Connexion</p></li>
+        </ul>
+    </nav>
+   
+        <div class="intro">
+            <br> <br> <br> <br><br>
+            <h1> Rendez votre chantier plus durable!</h1> <br> <br>
+            <div class="construction">src="{{ url_for('static', filename='img/mail.png')}}"
+                <img  src="{{ url_for('static', filename='img/construction.jpg')}}" style="width: 100%; max-width: 1050px;" >
+                <p class="source"><a href="https://fr.freepik.com/photos-gratuite/silhouette-construction_1242953.htm#query=chantier&position=33&from_view=search&track=sph&uuid=addf5ecd-f1d5-411e-b0cb-7223e9d3b3b3">Image de evening_tao</a> sur Freepik</p>
+            </div>
+            <br><br>
+            <p class="texte"> Si vous souhaitez <em>diminuer l'impact environnemental de votre chantier sans augmenter son coût </em>, alors ce site est fait pour vous! <br><br>
+
+                Notre modèle vous permet de rentrer simplement votre fichier BIM et la localisation de votre chantier et nous nous chargeons d'identifier les matériaux durables adéquats disponibles près de votre site. Notre modèle intègre / prend en compte ....., donc  <em>il n'y a aucun problème de faisabilité avec les résultats que nous vous fournissons.</em> <br><br>
+                
+                Voici les différentes étapes à suivre:</p> <br> <br>
+        </div>
+
+
+        <div class="enfer">
+            <div class="etape">
+                <p class="titre"> 1. Uploadez votre fichier BIM</p><br>
+                <img class= "image" src="https://img.freepik.com/photos-gratuite/ingenieur-architecte-pointant-vers-prototype-batiment-architectural-analysant-modele-construction-ordinateur-concepteur-homme-affaires-travaillant-distance-chez-lui-croquis-modelisation-projet-immobilier_482257-33964.jpg?w=2000&t=st=1698481511~exp=1698482111~hmac=bc7b7d0dbabc7227fe0fe18c0ea2e7836978060880a003f9a934cf01eadfeb32">
+                <p class="texteimage"> Nous récupérons les       informations de votre fichier afin qu'elles soient traitées par notre modèle</p>
+            </div>
+                
+             <div class=" etape">   
+                <p class="titre">2. Rentrez la localisation de votre chantier</p>
+                <img class="image" src="https://img.freepik.com/photos-premium/concept-vacances-voyage-punaise-bleue-carte-destination-photo-mise-au-point-selective_526934-1087.jpg?w=1800">
+                <p class="texteimage">Nous recherchons alors les matériaux durables les plus proches de votre site</p>
+            </div>
+            <div class="etape">   
+                <p class="titre">3. Lancez le traitement et recevez vos résultats!</p>
+                <img class="image" src="https://img.freepik.com/vecteurs-libre/concept-collecte-donnees-illustre-dessine-main_23-2149139706.jpg?w=2000&t=st=1698483977~exp=1698484577~hmac=41e7d2af4da4c59e16794263522cc4ff8bbf056ad13eaae9b5ddbb80ab49c00b">
+                <p class="texteimage">Nous listons pour vous les matériaux disponibles et l'impact de ces derniers</p>
+            </div>
+        </div>
+            
+                
+                
+                
+        
+            </div>
+            <br><br>
+
+            <p class="texte"> Pour que le processus soit le plus clair possible, vous pouvez visualiser la vidéo ci-dessous qui récapitule toutes les étapes jusqu'à l'affichage du résultat:</p><br>
+    
+                <video class="video" width="320" height="240" controls>
+                    <source class="video" src="https://pixabay.com/fr/videos/chercher-la-toile-site-internet-4941/" type=video/mp4> 
+                </video>
+            <br>
+            <br>
+            <p class="texte"> C'est maintenant à vous de jouer! Assurez-vous d'avoir votre fichier BIM et la localisation de votre chantier et appuyez sur le bouton suivant: </p><br> 
+            <button class="button"> <a href="simu.html">Démarrer la simulation</a></button> <br> <br>
+           
+</body>
+
+<footer>
+    <div class="container">
+        <div class="blockgauche">
+            <p class="titrefooter"> PROJET ZEROC</p> <br>
+            <a href="infos.html"> Qui sommes-nous?</a>
+            <a href="/templates/forum.html"> Forum</a>
+            <a href="/templates/blog.html"> Blog</a>
+            <br> <br>  
+        </div>
+        <div class="séparation">
+            <p>.</p>
+        </div>
+        <div class="blockmilieu">
+            <p class="titrefooter"> EN PLUS</p> <br>
+            <a href="/templates/mentionslegales.html"> Mentions légales</a>
+            <a href="/templates/conditions.html"> Conditions générales d'utilisation</a>
+            <a href="/templates/protectiondonnees.html"> Politique de protection des données personnelles</a>
+            <a href="/templates/cookies.html"> Cookies</a> 
+            <a href="/templates/donneesperso.html"> Données personnelles</a> 
+            <a href="/templates/conditionscompte.html"> Conditions générales d'utilisation du compte</a> 
+            <a href="/templates/publicité.html"> publicité</a> <br>  
+        </div>
+        <div class="séparation">
+            <p>.</p>
+        </div>
+        <div class="blockdroite">
+            <p class="titrefooter"> CONTACT</p><br>
+            <img src="{{ url_for('static', filename='img/mail.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="{{ url_for('static', filename='img/logofacebook.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="{{ url_for('static', filename='img/logoinstagram.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="{{ url_for('static', filename='img/logotwitter.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <p> FAQ</p>
+        </div>
+    </div>
+</footer>
+</html>

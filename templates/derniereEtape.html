@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/headerfooter.css">
+    <link rel="stylesheet" href="../static/css/derniereEtape.css">
+
+</head>
+<body>
+    <nav class="menu-bar">
+        <ul>
+            <img src="logoZeroc.png" style="width: 40px; height: 25px"> <p class="logo"> ZEROC</p>
+            <li><a id = "/Zeroc" href = "Zeroc.html">Accueil</a></li>
+            <li><a href = "simu.html">Lancer une simulation</a></li>
+            <li><a id = "/infos" href = "infos.html">Qui sommes-nous ?</a></li>
+            <li><p> <img src="img/utilisateur.png" style="height:20px; width: 20px">Connexion</p></li>
+        </ul>
+    </nav>
+    <br><br><br><br><br>
+    <div class="resultat"> 
+        <h1> Résultats de la simulation</h1>
+    </div>
+    <br> <br>
+    <div class="zoneResultat"><p>bonjour, ça arrive <br> à afficher les résultats ici</p></div>
+    <a href="/tasks/download/bonjour.json" download="bonjour.json">Save json to your computer</a>
+    <a href="/tasks/download/model.lp" download="model.lp">Save model to your computer</a>
+
+    <div class="upload-container">
+        <button type="button" class="upload-button">
+          <img src="img/arrow.png" alt="Flèche d'upload">
+        </button>
+        <div class="upload-area">
+          <input type="file" name="file" accept=".ifc"/>
+        </div>
+      </div>
+      <script src="../scripts/etape3"></script>
+    <br><br><br><br>
+    
+</body>
+<footer>
+    <div class="container">
+        <div class="blockgauche">
+            <p class="titrefooter"> PROJET ZEROC</p> <br>
+            <a href="/templates/infos.html"> Qui sommes-nous?</a>
+            <a href="/templates/forum.html"> Forum</a>
+            <a href="/templates/blog.html"> Blog</a>
+            <br> <br>  
+        </div>
+        <div class="séparation">
+            <p>.</p>
+        </div>
+        <div class="blockmilieu">
+            <p class="titrefooter"> EN PLUS</p> <br>
+            <a href="/templates/mentionslegales.html"> Mentions légales</a>
+            <a href="/templates/conditions.html"> Conditions générales d'utilisation</a>
+            <a href="/templates/protectiondonnees.html"> Politique de protection des données personnelles</a>
+            <a href="/templates/cookies.html"> Cookies</a> 
+            <a href="/templates/donneesperso.html"> Données personnelles</a> 
+            <a href="/templates/conditionscompte.html"> Conditions générales d'utilisation du compte</a> 
+            <a href="/templates/publicité.html"> publicité</a> <br>  
+        </div>
+        <div class="séparation">
+            <p>.</p>
+        </div>
+        <div class="blockdroite">
+            <p class="titrefooter"> CONTACT</p><br>
+            <img src="{{ url_for('static', filename='img/mail.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="{{ url_for('static', filename='img/logofacebook.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="{{ url_for('static', filename='img/logoinstagram.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="{{ url_for('static', filename='img/logotwitter.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <p> FAQ</p>
+        </div>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,82 @@
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-weight:520;
+}
+
+.texte {
+        font-size: 1.2em;
+        max-width: 700px;
+        margin: auto;
+}
+
+.bouton{
+    text-align: center;
+}
+
+#drop-area {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height:300px;
+    padding: 30px;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 20px;
+    margin: auto; 
+}
+
+#doc-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px dashed #3624ff;
+    background: #b7feff;
+}  
+
+.hidden {
+    display: none;
+}
+
+
+.etape2 {
+    text-align: center;
+}
+
+
+.etape2 button {
+    background-color: rgb(63, 19, 255);
+    margin: auto;
+    border: 1px black solid;
+}
+
+.etape2 a {
+    text-align: center;
+    color:white;
+    padding: 20px;
+    margin: 40px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.etape2 button:hover {
+    background-color: rgb(104, 45, 252);
+}
+
+.arrow {
+    border: solid rgb(255, 255, 255);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
