@@ -1,0 +1,184 @@
+;;;;;;;;;
+Partie;Méthode;caractéristique unitaire;Unité de la caracteristique;Volume horaire humain;Par unité ;Matériaux utilisés;"Nombre d'heures par
+ machine au mètre carré posé";Commentaires;Article consulté
+Charpentes;acier ;;;0,64;m2;Grues, nacelles, presse hydraulique, perceuse, taraudeuse, machines de soudage, découpeur plasma, machines de cintrage, meuleuse;;Maison 50 m2;COMPARATIVO DOS SISTEMAS CONSTRUTIVOS STEEL FRAME E WOOD FRAME PARA HABITAÇÕES DE INTERESSE SOCIAL
+Charpentes;beton;;;;;;;;
+Charpentes;bois;;;0,7;m2;Scies de différents types, Perceuse électrique, Cloueuse à charpente, Agrafeuse pneumatique;;Maison 50 m2;COMPARATIVO DOS SISTEMAS CONSTRUTIVOS STEEL FRAME E WOOD FRAME PARA HABITAÇÕES DE INTERESSE SOCIAL
+Charpentes;;;;;;;;;
+Dalles et prédalles;;;;;;;;;
+Dalles et prédalles;Céramique;20x30x8;cmxcmxcm;0,855;m2;"étais en bois ; Clou en acier à double tête 17x27";/;;Document en portuguais
+Dalles et prédalles;Céramique;20x30x12;cmxcmxcm;0,729;m2;"étais en bois ; Clou en acier à double tête 17x27";/;;Document en portuguais
+Dalles et prédalles;PVC;33 x 100 x 16;cmxcmxcm;0,359;m2;"étais en bois ; Clou en acier à double tête 17x27";/;;Document en portuguais
+Dalles et prédalles;PVC;33 x 100 x 20;cmxcmxcm;0,28;m2;"étais en bois ; Clou en acier à double tête 17x27";/;;Document en portuguais
+Dalles et prédalles;Céramique;20x30x8;cmxcmxcm;0,855;m2;"entretoises en bois;Clou en acier à double tête 17x27";/;Revêtement;Document en portuguais
+Dalles et prédalles;;;;;;;;;
+Murs ;Béton armé;armature;;2,1495;m3;"Treillis en acier soudé ayant des nervures ; Écarteur circulaire avec entrée latérale en plastique ; fil recuit";;Cadre du système de murs en béton, exécuté sur des murs de bâtiments à un étage ou à plusieurs étages.;Document en portugais
+Murs ;;betonnage;;2,388;m3;"Béton usiné bombeavel ; vibrateur à immersion";;Concassafe de murs dans les bâtiments multifamiliaux fabriqués avec un système de coffrage maniable, avec béton usiné pompable;Document en portugais
+Murs ;;enduits; ;0,317;m3;"Mortier adhésif type AC III ; ";;Stuc de faible densité de tissus de facade du sistème de murs en béton dans les bâtiments à plusieurs étages, accès à plate-forme ou siège auto.;Document en portugais
+Murs ;;coffrage;;0,4511;m3;"Agent de démoulage pour les formes métallisées ;Système de formes d'aluminium manipulables";;Formes manuelles pour les murs en béton moulés sur place, de bâtimets à plusieurs étages;Document en portugais
+Murs ;Maçonnerie blocs perforés;19 X19 X 39;cmxcmxcm;1,48;m2;toile métallique soudée galvanisée/zinguée pour maçonnerie, clou en acier avec trou, mortier dosage 1:2:8 (en volume de ciment, chaux et sable moyen humide) pour enduit/couche unique/pose de maçonnerie de cloison;BÉTONNIÈRE DE 400L;;Document en portugais
+Murs ;placo;Face simple avec une superficie totale supérieure à 6m2;-;0,79;m2;Clou en acier avec rondelle conique, diamètre de la rondelle = 23 mm et longueur de la tige = 27 mm. Profil guide, forme U, en acier zingué, pour structure de cloison sèche, épaisseur = 0,5 mm, dimensions 70 x 3000 mm. Profil montant, forme C, en acier zingué, pour structure de cloison sèche, épaisseur = 0,5 mm, dimensions 70 x 3000 mm. Ruban de papier microperforé, 50 x 150 mm, pour le traitement des joints de plaques de plâtre pour cloison sèche. Ruban de papier renforcé avec une lame de métal pour le renforcement des coins des plaques de plâtre pour cloison sèche. Enduit en poudre pour cloison sèche, à base de plâtre, séchage rapide, pour le traitement des joints de plaques de plâtre. Vis pour cloison sèche, en acier phosphaté, tête trompette et pointe aiguille (TA), longueur 25 mm. Vis pour cloison sèche, en acier zingué, tête lentille et pointe foreuse (LB), largeur 4,2 mm, longueur 13 mm.;;;Document en portugais
+Murs ;;Face double avec une superficie totale supérieure à 6m2;-;1,08;m2;Clou en acier avec rondelle conique, diamètre de la rondelle = 23 mm et longueur de la tige = 27 mm. Profil guide, forme U, en acier zingué, pour structure de cloison sèche, épaisseur = 0,5 mm, dimensions 70 x 3000 mm. Profil montant, forme C, en acier zingué, pour structure de cloison sèche, épaisseur = 0,5 mm, dimensions 70 x 3000 mm. Ruban de papier microperforé, 50 x 150 mm, pour le traitement des joints de plaques de plâtre pour cloison sèche. Ruban de papier renforcé avec une lame de métal pour le renforcement des coins des plaques de plâtre pour cloison sèche. Enduit en poudre pour cloison sèche, à base de plâtre, séchage rapide, pour le traitement des joints de plaques de plâtre. Vis pour cloison sèche, en acier phosphaté, tête trompette et pointe aiguille (TA), longueur 25 mm. Vis pour cloison sèche, en acier zingué, tête lentille et pointe foreuse (LB), largeur 4,2 mm, longueur 13 mm.;;;Document en portugais
+Murs ;;Face double avec une superficie totale inférieure à 6m2;-;1,42;m2;Clou en acier avec rondelle conique, diamètre de la rondelle = 23 mm et longueur de la tige = 27 mm. Profil guide, forme U, en acier zingué, pour structure de cloison sèche, épaisseur = 0,5 mm, dimensions 70 x 3000 mm. Profil montant, forme C, en acier zingué, pour structure de cloison sèche, épaisseur = 0,5 mm, dimensions 70 x 3000 mm. Ruban de papier microperforé, 50 x 150 mm, pour le traitement des joints de plaques de plâtre pour cloison sèche. Ruban de papier renforcé avec une lame de métal pour le renforcement des coins des plaques de plâtre pour cloison sèche. Enduit en poudre pour cloison sèche, à base de plâtre, séchage rapide, pour le traitement des joints de plaques de plâtre. Vis pour cloison sèche, en acier phosphaté, tête trompette et pointe aiguille (TA), longueur 25 mm. Vis pour cloison sèche, en acier zingué, tête lentille et pointe foreuse (LB), largeur 4,2 mm, longueur 13 mm.;;;Document en portugais
+Murs ;;Face simple avec une superficie totale inférieure à 6m2;-;0,99;m2;Clou en acier avec rondelle conique, diamètre de la rondelle = 23 mm et longueur de la tige = 27 mm. Profil guide, forme U, en acier zingué, pour structure de cloison sèche, épaisseur = 0,5 mm, dimensions 70 x 3000 mm. Profil montant, forme C, en acier zingué, pour structure de cloison sèche, épaisseur = 0,5 mm, dimensions 70 x 3000 mm. Ruban de papier microperforé, 50 x 150 mm, pour le traitement des joints de plaques de plâtre pour cloison sèche. Ruban de papier renforcé avec une lame de métal pour le renforcement des coins des plaques de plâtre pour cloison sèche. Enduit en poudre pour cloison sèche, à base de plâtre, séchage rapide, pour le traitement des joints de plaques de plâtre. Vis pour cloison sèche, en acier phosphaté, tête trompette et pointe aiguille (TA), longueur 25 mm. Vis pour cloison sèche, en acier zingué, tête lentille et pointe foreuse (LB), largeur 4,2 mm, longueur 13 mm.;;;Document en portugais
+Murs ;béton cellulaire;15 X 30 X 60;cmxcmxcm;1,6;m2;toile métallique soudée galvanisée/zinguée pour maçonnerie, mortier dosage 1:2:8 (en volume de ciment, chaux et sable moyen humide) pour enduit/couche unique/pose de maçonnerie de cloison;BÉTONNIÈRE DE 400L;;Document en portugais
+Murs ;blocs de béton;19 X19 X 39;cmxcmxcm;1,56;m2;toile métallique soudée galvanisée/zinguée pour maçonnerie, clou en acier avec trou, mortier dosage 1:2:8 (en volume de ciment, chaux et sable moyen humide) pour enduit/couche unique/pose de maçonnerie de cloison;BÉTONNIÈRE DE 400L;;Document en portugais
+Murs ;terre cuite;5 X 10 X 20;cmxcmxcm;3,9;m2;mortier dosage 1:2:8 (en volume de ciment, chaux et sable moyen humide) pour crépi/couche unique/pose de maçonnerie de clôture;BÉTONNIÈRE DE 400L;;Document en portugais
+Murs ;;;;;;;;;
+Planchers et radiers ;;;;;;;;;
+Planchers et radiers ;Planchers flottants avec lambourdes sur dalle béton;Panneaux épaisseur 19 mm;;0,9;m2;Panneau de particules hydrofugé, lambourdes pin traité 60 x 50 sur bande isolante 15 x 100 et film plastique Compris accessoires de fixation par vis et;;;Catalogue GO-SO
+Planchers et radiers ;Parquet à l'anglaise à coupes perdues en pin;;;1;m2;Posés sur lambourdes en chêne, scellées, lames épaisseur 23 mm, largeur 65 - 70 mm.;;;Catalogue GO-SO
+Planchers et radiers ;Planchers flottants en panneaux CTBS;épaisseur 12 mm;;0,22;m2;Panneaux de particules CTBS bouvetés 4 rives.;;;Catalogue GO-SO
+Planchers et radiers ;Parquet flottant;Sous-couche polystyrène expansé, ép. 2 mm, pare vapeur intégré;;0,058;m2;Parquet flottant à clipser (sans colle) posé sur sous-couche (à reprendre en complément), compris coupes. Compris les fournitures pour les prix des sous-couches, non compris la fourniture pour la pose seule de parquet.;;;Catalogue GO-SO
+Planchers et radiers ;Finitions de parquets;Ponçage de parquet neuf;;0,25;m2;;;;Catalogue GO-SO
+Planchers et radiers ;;;;;;;;;
+Revêtements intérieurs ;"plâtre (pour recevoir 
+des carreaux de
+ céramique)";"Mortier 1:2:8 (par volume de ciment, de chaux et de sable humide), préparation mécanique et application manuelle
+/ épaisseur = 10 / surface < 5";mm / m²;0,627;m2;0,02130 m3 de mortier;BÉTONNIÈRE DE 400L;;Document en portuguais
+Revêtements intérieurs ;;Mortier 1:2:8 (par volume de ciment, de chaux et de sable humide), préparation mécanique et application manuelle / épaisseur = 10 / surface entre 5 et 10;mm / m²;0,424;m2;"0,02130
+ m3 de mortier";BÉTONNIÈRE DE 400L;;Document en portuguais
+Revêtements intérieurs ;;Mortier 1:2:8 (par volume de ciment, de chaux et de sable humide), préparation mécanique et application manuelle / épaisseur = 10 / surface > 10;mm / m²;0,274;m2;0,02130 m3 de mortier;BÉTONNIÈRE DE 400L;;Document en portuguais
+Revêtements intérieurs ;;Mortier 1:2:8 (par volume de ciment, de chaux et de sable humide), préparation mécanique et application manuelle / épaisseur = 20 / surface < 5;mm / m²;0,791;m2;0,03760 m3 de mortier;BÉTONNIÈRE DE 400L;;Document en portuguais
+Revêtements intérieurs ;;Mortier 1:2:8 (par volume de ciment, de chaux et de sable humide), préparation mécanique et application manuelle / épaisseur = 20 / surface entre 5 et 10;mm / m²;0,588;m2;0,03760 m3 de mortier ;BÉTONNIÈRE DE 400L;;Document en portuguais
+Revêtements intérieurs ;;Mortier 1:2:8 (par volume de ciment, de chaux et de sable humide), préparation mécanique et application manuelle / épaisseur = 20 / surface > 10;mm / m²;0,438;m2;0,03760 m3 de mortier ;BÉTONNIÈRE DE 400L;;Document en portuguais
+Revêtements intérieurs ;monocap;mortier 1,5 ;mmxmm;0,691;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier 1,5;mmxmm;0,392;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier 1,5;mmxmm;;m2;;;;Document en portuguais
+Revêtements intérieurs ;;;;;;;;;
+Revêtements intérieurs ;"Appuis de fenetre
+ et parapets";mortier 1:6 seuil prémolé / angle droit / Longueur du bac d'égouttement<= 2M;;1,808;m;;;;Document en portuguais
+Revêtements intérieurs ;;mortier 1:6 seuil prémolé / angle droit / Longueur du bac d'égouttement>2M;;1,305;m;;;;Document en portuguais
+Revêtements intérieurs ;;mortier 1:6 seuil prémolé / angle droit / Longueur du bac d'égouttement<=6m;;0,815;m;;;;Document en portuguais
+Revêtements intérieurs ;;mortier 1:6 seuil prémolé / angle droit / Longueur du bac d'égouttement>6m;;0,588;m;;;;Document en portuguais
+Revêtements intérieurs ;;;;;;;;;
+Revêtements intérieurs ;Sous-planchers;mortier dash avec bétonnière 1:4 / appliqué sur des zones de plaque sèches en continue 2cm;;0,321;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier dash manuel 1:4 / appliqué sur des zones de plaque sèches en continue 2cm;;0,321;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier avec mélangeur 1:4 / appliqué sur des zones de plaque sèches en continue 2cm;;0,321;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier manuel 1:4 / appliqué sur des zones de plaque sèches en continue 2cm;;0,321;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier dash avec bétonnière 1:4 / appliqué sur des zones de plaque sèches en continue 3cm;;0,368;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier dash manuel 1:4 / appliqué sur des zones de plaque sèches en continue 3cm;;0,368;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier avec mélangeur 1:4 / appliqué sur des zones de plaque sèches en continue 3cm;;0,368;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier manuel 1:4 / appliqué sur des zones de plaque sèches en continue 3cm;;0,368;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier dash avec bétonnière 1:4 / appliqué sur des zones de plaque sèches en continue 4cm;;0,407;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier dash manuel 1:4 / appliqué sur des zones de plaque sèches en continue 4cm;;0,407;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier avec mélangeur 1:4 / appliqué sur des zones de plaque sèches ren continue 4cm;;0,407;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier manuel 1:4 / appliqué sur des zones de plaque sèches en continue 4cm;;0,407;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier 1:4 / appliqué sur des zones de plaque sèches en discontinue 4cm;;0,372;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier 1:4 / appliqué sur des zones de plaque sèches en discontinue 5cm;;0,427;m2;;;;Document en portuguais
+Revêtements intérieurs ;;mortier 1:4 / appliqué sur des zones de plaque sèches en discontinue 6cm;;0,448;m2;;;;Document en portuguais
+Revêtements intérieurs ;;;;;;;;;
+Revêtements intérieurs ;revetements du sol;Carrelage hydraulique d’intérieur/ aire supérieure à 5m2 ;cm2;3,299;m2;carrelage hydraulique 20*20cm, modèle copacabana, 2 couleurs noir et blanc;;;Document en portuguais
+Revêtements intérieurs ;;Carrelage hydraulique d’intérieur/ aire inférieure à 5m2 ;cm2;6,891;m2;carrelage hydraulique 20*20cm, modèle copacabana, 2 couleurs noir et blanc;;;Document en portuguais
+Revêtements intérieurs ;;Carrelage d'intérieur en granite;cm2;1,782;m2;carrelage en granite poli , format inférieur ou égal à 3025 cm2;;;Document en portuguais
+Revêtements intérieurs ;;Carrelage d'intérieur en marbre;cm2;1,782;m2;Sol en marbre, poli, blanc, 2 cm d’épaisseur;;;Document en portuguais
+Revêtements intérieurs ;; sol en vinyle d'épaisseur égale à 3,2mm;cm2;0,256;m2;panneau de vinyle 30*30cm;;;Document en portuguais
+Revêtements intérieurs ;; sol en vinyle d'épaisseur égale à 2mm;cm2;0,486;m2;Couverture de sol en vinyle souple, 2 mm d’épaisseur, 2 m de largeur;;;Document en portuguais
+Revêtements intérieurs ;;Revêtement de sol cimenté/ finition lisse d'épaisseur 2cm;m3;0,531;m2;Mortier de ciment et de sable, 1 :3 temps, préparation mécanique avec une bétonnière de 400 litres : matériau qui compose le;;;Document en portuguais
+Revêtements intérieurs ;;Revêtement de sol cimenté/ finition lisse d'épaisseur 3cm;m3;0,584;m2;mortier dash 1:3 ( en volume de ciment et de sable moyen humide );;;Document en portuguais
+Revêtements intérieurs ;;Revêtement de sol cimenté/finition rustique d'épaisseur 2cm;m3;0,447;m2;Mortier de ciment et de sable, 1 :3 temps, préparation mécanique avec une bétonnière de 400 litres : matériau qui compose le;;;Document en portuguais
+Revêtements intérieurs ;;Revêtement de sol cimenté/finition rustique d'épaisseur 3cm;m3;0,5;m2;mortier dash 1:3 ( en volume de ciment et de sable moyen humide );;;Document en portuguais
+Revêtements intérieurs ;;sol en caoutchouc posé avec du mortier à pastille avec une épaisseur égale à 7 mm;cm2;1,067;m2;plancher en caoutchouc perlé ou carrelé, noir en plaques 50*50 cm;;;Document en portuguais
+Revêtements intérieurs ;;sol en caoutchouc posé avec du mortier à pastille avec une épaisseur égale à 15 mm;cm2;1,067;m2;plancher en caoutchouc perlé ou carrelé, noir en plaques 50*50 cm;;;Document en portuguais
+Revêtements intérieurs ;;sol en caoutchouc fixé avec la colle rembourré de 3,5mm;cm2;0,6851;m2;sol en caoutchouc rembourré en plaques 50*50cm;;;Document en portuguais
+Revêtements intérieurs ;;sol en caoutchouc fixé avec la colle cotelé avec 3,5 cm;cm2;0,6851;m2;sol en caoutchouc cotelé en plaques 50*50cm;;;Document en portuguais
+Revêtements intérieurs ;;;;;;;;;
+Revêtements Extérieurs;Façade rideau en verre en système stick;1,25 X 3,20 ;m;1,924;m2;17 x 3 MM;;;Document en portuguais
+Revêtements Extérieurs;Façade rideau en verre en système unitisé;1,25 X 3,20;m;1,186;m2;Profils aluminium anodisé, verre laminé 8 mm, cadres en aluminium, plaques de verre, ancrages, chevilles, attaches, vis de fixation, joints d'étanchéité et traitement des joints.;;;Document en portuguais
+Revêtements Extérieurs;Façade en verre en système Spider Glass;2,00 X 2,50;m;1,84;m2;Spiders en acier inoxydable fixés sur des colonnes métalliques, verre trempé laminé de 16 mm. Inclus spider, rotule, verre, vis de fixation, joints d'étanchéité et traitement des joints;;;Document en portuguais
+Revêtements Extérieurs;Revêtement céramique pour murs extérieurs en carreaux de porcelaine de 5 x 5 cm;plaques de 30 X 30;cm;1,734;m2;Carreau de céramique/porcelaine, revêtement intérieur/extérieur et piscine, couleurs blanches ou froides, unies, sans mélange, finition lisse, 5 x 5 cm;;;Document en portuguais
+Revêtements Extérieurs;Revêtement céramique pour murs extérieurs, avec des plaques de type grès ou semi-grès;format inférieur ou égal à 200 ;cm2;1,71;m2;joint cimentaire, mortier adhésif de type AC III, Revêtement en céramique émaillée pour façades, pièces au format approximatif de 7 x 26 cm, fournies en plaques avec des pièces reliées par des points, ;;;Document en portuguais
+Isolation extérieur;;;;;;;;;
+Isolation extérieur;Pose libre - Toitures terrases;Épaisseur 70mm et R=1.75;;0,1;m2;Panneau de laine de roche;;;Catalogue GO-SO
+Isolation extérieur;Pose par collage à froid - Toitures terrases;Épaisseur 70mm et R=1.75;;0,15;m2;Panneau de laine de roche;;;Catalogue GO-SO
+Isolation extérieur;Pose libre - Toitures terrases;Épaisseur 60 mm et R=1.75;;0,05;m2;Panneau de polystyrène expansé;;;Catalogue GO-SO
+Isolation extérieur;Pose par collage à froid - Toitures terrases;Épaisseur 60 mm et R=1.75;;0,075;m2;Panneau de polystyrène expansé;;;Catalogue GO-SO
+Isolation extérieur;Pose libre - Toitures terrases;Épaisseur 30 mm et R=1.25;;0,04;m2;Panneau de mousse de polyuréthane;;;Catalogue GO-SO
+Isolation extérieur;Pose par collage à froid - Toitures terrases;Épaisseur 30 mm et R=1.25;;0,065;m2;Panneau de mousse de polyuréthane;;;Catalogue GO-SO
+Isolation extérieur;;;;;;;;;
+Isolation extérieur;Collé - Façade;Épaisseur 60 mm;;1,16;m2;Revêtements plastiques épais sur polystyrène;;;Catalogue GO-SO
+Isolation extérieur;Fixé - Façade;Épaisseur 60 mm;;1,27;m2;Revêtements plastiques épais sur polystyrène;;;Catalogue GO-SO
+Isolation extérieur;Pose collé - Façade;Épaisseur 60 mm;;0,03;m2;Polystyrène expansé;;;Catalogue GO-SO
+Isolation extérieur;Pose sur structure métal - Façade;Épaisseur 60 mm;;0,07;m2;Polystyrène expansé;;;Catalogue GO-SO
+Isolation extérieur;Fixé sur bois - Façade;Épaisseur 60 mm;;0,31;m2;Panneau en fibres de bois;;;Catalogue GO-SO
+Isolation extérieur;Fixation mécanique - Façade;Épaisseur 55 mm et R=1.5;;0,11;m2;Panneaux rigides non revêtus ;;;Catalogue GO-SO
+Isolation extérieur;Fixation mécanique - Façade;Épaisseur 55 mm et R=1.5;;0,11;m2;Panneaux rigides revêtus voile minéral noir ;;;Catalogue GO-SO
+Isolation extérieur;;;;;;;;;
+Isolation intérieur;"Doublage plaque
+ collé";Plaque BA 10 + 40, R=1.2;;0,4;m2;Complexe plaque de plâtre / isolant en laine de verre;;;Catalogue GO-SO
+Isolation intérieur;;Plaque BA 10 + 40, R=1.25;;0,4;m2;Complexe plaque de plâtre / isolant en laine de roche;;;Catalogue GO-SO
+Isolation intérieur;;Plaque BA 10 + 40, R=1.1;;0,4;m2;Complexe plaque de plâtre / isolant en polystyrène expanse;;;Catalogue GO-SO
+Isolation intérieur;;Plaque BA 10 + 60, R=2.1;;0,4;m2;Complexe plaque de plâtre / isolant en polystyrène extrudé;;;Catalogue GO-SO
+Isolation intérieur;;Plaque BA 14 + 40, R=1,3;;0,4;m2;Complexe plaque de plâtre / isolant en polystyrène haute densité;;;Catalogue GO-SO
+Isolation intérieur;;Plaque BA 10 + 40, R=1.75;;0,4;m2;Complexe plaque de plâtre / isolant en polyuréthane;;;Catalogue GO-SO
+Isolation intérieur;;;;;;;;;
+Isolation intérieur;Cloisons poses;Cloison 120/48, e=70mm;;1,15;m2;Plâtre acoustique avec laine de verre;;;Catalogue GO-SO
+Isolation intérieur;;Cloison phonique 72/48, e=45mm;;0,76;m2;Plâtre phonique avec laine de verre;;;Catalogue GO-SO
+Isolation intérieur;Cloisons vissées, montants simples;Cloison 98/48, e=45mm;;0,99;m2;Cloison de protection contre les rayons X avec laine de verre;;;Catalogue GO-SO
+Isolation intérieur;Cloisons vissées, montants doubles;Cloison 98/48, e=45mm;;1,01;m2;Cloison de protection contre les rayons X avec laine de verre;;;Catalogue GO-SO
+Isolation intérieur;Contre-cloisons vissés sur métal à parements simples;Plaque BA 13, e=45mm;;0,65;m2;Contre-cloison avec laine de verre semi-rigide;;;Catalogue GO-SO
+Isolation intérieur;Contre-cloisons vissés sur métal à parements doubles;2 Plaques BA 13, e=45mm;;0,75;m2;Contre-cloison avec laine de verre semi-rigide;;;Catalogue GO-SO
+Isolation intérieur;Contre-cloisons vissés sur métal à parements triples;3 Plaques BA 18, e=45mm;;0,88;m2;Contre-cloison avec laine de verre semi-rigide;;;Catalogue GO-SO
+Isolation intérieur;;;;;;;;;
+Isolation intérieur;Panneaux poses;Panneau à carreler ép. 10mm;;0,055;m2;Panneaux de polystyrène extrudé armé;;;Catalogue GO-SO
+Isolation intérieur;;;;;;;;;
+Isolation intérieur;Cloisons amovibles;e= 84mm. 2 plaques de plâtre 13 mm;;0,612;m2;Cloison amovible pleine, avec isolation 45mm;;;Catalogue GO-SO
+Isolation intérieur;;;;;;;;;
+Isolation intérieur;"Incorporation isolant
+ pour plafonds";e=60mm, R=1,5;;0,06;m2;Plaque de plâtre en laine de verre;;;Catalogue GO-SO
+Isolation intérieur;;e=60mm, R=1,4;;0,06;m2;Plaque de plâtre en laine de roche;;;Catalogue GO-SO
+Isolation intérieur;;e=60mm, R=1,5;;0,06;m2;Plaque de plâtre en laine de chanvre;;;Catalogue GO-SO
+Isolation intérieur;;e=60mm, R=1,53;;0,06;m2;Plaque de plâtre en fibre de cellulose;;;Catalogue GO-SO
+Isolation murs;;;;;;;;;
+Isolation murs;Panneau rigide de polystyrène expansé;e=60mm, R=1,9;;0,082;m2;pose d'une isolation en polystyrène expansé collé;;;Catalogue GO-SO
+Isolation murs;Panneau rigide de polystyrène extrude;e=60mm, R=2,05;;0,082;m2;pose d'une isolation en polystyrène extrudé collé;;;Catalogue GO-SO
+Isolation murs;Panneau semi-rigide de laine de verre;e=60mm, R=1,85;;0,082;m2;pose d'une isolation en laine de verre revêtu Kraft avec pare-vapeur collé;;;Catalogue GO-SO
+Isolation murs;Panneau semi-rigide de mousse de polyuréthane;e=60mm, R=2,6;;0,082;m2;pose d'une isolation en mousse de polyuréthane collé;;;Catalogue GO-SO
+Isolation murs;Panneau semi-rigide de laine de roche;e=75mm, R=2;;0,082;m2;pose d'une isolation en laine de roche collé;;;Catalogue GO-SO
+Isolation murs;Billes de polystyrène soufflés dans vide;e=50mm;;0,05;m2;Billes de polystyrène blanc vide ;;;Catalogue GO-SO
+Isolation murs;Isolation mince;e=12mm, R=3,5;;0,15;m2;Pose d'une isolation mince réfléchissant thérmo-accoustique collé;;;Catalogue GO-SO
+Isolation murs;"""Eco-habitat"" panneau en liège expansé";1x0,5 m, e=20mm, R=0,5;;0,082;m2;Panneau semi-rigide de liège expansé collé;;;Catalogue GO-SO
+Isolation murs;"""Eco-habitat"" panneau de roseaux";1x2m, e=20mm, R=0,41 ;;0,115;m2;pose d'une isolation en roseaux naturels;;;Catalogue GO-SO
+Isolation murs;"""Eco-habitat"" panneau semi-rigide de chanvre";1,2x0,6m, e=45mm, R=1,07;;0,082;m2;pose d'une isolation par panneau semi-rigide de chanvre collé;;;Catalogue GO-SO
+Isolation murs;"""Eco-habitat"" panneau semi-rigide de coco";1,25x0,625m, e=10/13mm;;0,082;m2;pose d'une isolation par panneau semi-rigide de coco collé;;;Catalogue GO-SO
+Isolation murs;"""Eco-habitat"" panneau flexible de ouate de cellulose";1,2x0,625m, e=40mm, R=1,02;;0,082;m2;pose d'une isolation par panneau flexible de ouate de cellulose collé;;;Catalogue GO-SO
+Isolation murs;"""Eco-habitat"" panneau flexible de laine de bois, densite=55 kg/m3";1,35x0,575m, e=60mm, R=1,58;;0,082;m2;pose d'une isolation par panneau de laine de bois, densité 55 kg/m3;;;Catalogue GO-SO
+Isolation murs;"""Eco-habitat"" panneau semi-rigide de laine de bois, densité=40 kg/m3";1,25x0,58m, e=60mm, R=1,5;;0,082;m2;pose d'une isolation par panneau de laine de bois, densité 40 kg/m3;;;Catalogue GO-SO
+Isolation murs;"""Eco-habitat"" panneau semi-rigide de laine de bois, densité=70 kg/m3";1,2x0,58m, e=60mm;;0,082;m2;pose d'une isolation par panneau de laine de bois, densité 70 kg/m3;;;Catalogue GO-SO
+Isolation murs;"""Eco-habitat"" panneau semi-rigide de laine de coton recyclé";1,2x0,6m, e=50mm, R=1,28;;0,082;m2;pose d'une isolation par panneau semi-rigide de laine de coton récycle, densité=25kg/m3;;;Catalogue GO-SO
+Isolation murs;Par projection de mousse isolante;e=100mm, R=2,63;;0,03;m2;pose d'une isolation par projection de mousse isolante en phase aqueuse sur surface réceptionnée;;;Catalogue GO-SO
+Isolation murs;;;;;;;;;
+Isolation des combles;;;;;;;;;
+Isolation des combles;Isolation en laine de verre soufflé;e=225mm, R=5;;0,12;m2;Isolation laine de verre en flocons soufflés;;;Catalogue GO-SO
+Isolation des combles;Isolation laine de roche soufflé;e=225mm, R=5;;0,12;m2;Isolation laine de roche soufflé;;;Catalogue GO-SO
+Isolation des combles;Isolation vermiculite répandu;e=200mm, R=3,75;;0,16;m2;Isolation de vermiculite sur plancher entre solives;;;Catalogue GO-SO
+Isolation des combles;"""Eco-habitat"" Isolation en vrac ouate de cellulose";en vrac;;0,9;m3;Isolant en vrac de ouate de cellulose;;;Catalogue GO-SO
+Isolation des combles;"""Eco-habitat"" Isolation ouate de cellulose soufflée";e=200mm, R=5;;0,12;m2;Isolation ouate de cellulose soufflé;;;Catalogue GO-SO
+Isolation des combles;"""Eco-habitat"" Isolation en vrac chanvre";e=200mm, R=5;;0,08;m2;Isolant en vrac de chanvre;;;Catalogue GO-SO
+Isolation des combles;"""Eco-habitat"" Isolation en vrac laine de mouton";en vrac;;0,9;m3;Isolant en vrac de laine de mouton;;;Catalogue GO-SO
+Isolation des combles;"""Eco-habitat"" Isolation en vrac granulat de liège expansé";en vrac;;0,9;m3;Isolation en vrac de granulat de liège expansé;;;Catalogue GO-SO
+Isolation des combles;Isolation en laine de verre revêtu Kraft pare-vapeur déroulée sur solives;e=100, R=2,5;;0,1;m2;Laine de verre déroulée sur solives;;;Catalogue GO-SO
+Isolation des combles;"""Eco-habitat"" Isolation en chanvre déroulée sur solives";L=0,6m, e=60mm, R=1,5;;0,1;m2;pose d'une isolation de chanvre par rouleau déroulé sur solives;;;Catalogue GO-SO
+Isolation des combles;"""Eco-habitat"" Isolation en coco déroulée sur solives";L=1m, e=20/23mm;;0,1;m2;pose d'une isolation de coco par rouleau déroulé sur solives;;;Catalogue GO-SO
+Isolation des combles;"""Eco-habitat"" Isolation en laine de mouton déroulée sur solives";L=0,6m, e=60mm, R=1,5;;0,1;m2;pose d'une isolation de laine de mouton déroulé sur solives;;;Catalogue GO-SO
+Isolation des combles;"""Eco-habitat"" Isolation en lin déroulée sur solives";1,35x0,615m, e=50mm, R=1,28;;0,1;m2;pose d'une isolation de laine de lin par rouleau déroulé sur solives;;;Catalogue GO-SO
+Isolation des combles;"""Eco-habitat"" Isolation en laine de coton recyclé déroulée sur solives";L=0,6m, e=50mm, R=1,28;;0,1;m2;pose d'une isolation de laine de coton recyclé par rouleaux déroulés sur olives;;;Catalogue GO-SO
+Isolation des combles;Par projection de mousse isolante;e=100mm, R=2,63;;0,025;m2;pose d'une isolation par projection de mousse isolante en phase aqueuse, sur surface réceptionnée;;;Catalogue GO-SO
+Isolation des combles;Isolation rampant en laine de verre simple couche;e=100mm, R=2,5;;0,42;m2;pose d'une isolation par laine de verre simple couche, compris suspentes et fourrures;;;Catalogue GO-SO
+Isolation des combles;Isolation rampant en laine de verre double couche;e=120+60mm;;0,53;m2;pose d'une isolation par laine de verre double couche, compris suspentes et fourrures;;;Catalogue GO-SO
+Isolation des combles;Isolation rampant en laine de roche simple couche;e=100mm, R=2,35;;0,42;m2;pose d'une isolation par laine de roche simple couche, compris suspentes et fourrures;;;Catalogue GO-SO
+Isolation des combles;Isolation rampant en laine de roche double couche;e=120+75mm;;0,53;m2;pose d'une isolation par laine de roche double couche, compris suspentes et fourrures;;;Catalogue GO-SO
+Isolation des combles;Isolation rampant en panneau de polystyrène extrudé;e=100mm, R=2,8;;0,46;m2;pose d'une isolation en panneau de polystyrène extrudé, compris suspentes et fourrures;;;Catalogue GO-SO
+Isolation des combles;Isolation rampant par projection de mousse isolante;e=100mm, R=2,63;;0,035;m2;pose d'une isolation par projection de mousse isolante en phase aqueuse, sur surface réceptionnée;;;Catalogue GO-SO
+Isolation des combles;Isolation mince;e=12mm, R=3,5;;0,15;m2;Isolation mince réfléchissant thermo-acoustique agrafée;;;Catalogue GO-SO
+Isolation des combles;;;;;;;;;
+Isolation en plafond;;;;;;;;;
+Isolation en plafond;Par projection de mousse isolante;e=100mm, R=2,63;;0,04;m2;pose d'une isolation par projection de mousse isolante en phase aqueuse sur surface réceptionnée;;;Catalogue GO-SO
+Isolation en plafond;;;;;;;;;
+Peintures;;;;;;;;;
+Peintures;Travaux d'application à la brosse;1 couche de peinture mate en phase aqueuse, à la brosse, compris léger ponçage;;0,138;m2;;;;Catalogue GO-SO
+Peintures;Travaux d'application au rouleau;1 couche de peinture mate en phase aqueuse au rouleau, compris léger ponçage;;0,11;m2;;;;Catalogue GO-SO
+Peintures;Travaux d'application au pistolet;1 couche de peinture mate en phase aqueuse au pistolet, compris léger ponçage;;0,064;m2;;;;Catalogue GO-SO
+Peintures;Travaux d'application sur toiles de verre à peindre;1 couche de peinture mate en phase aqueuse au rouleau sur toile de verre lisse, compris léger ponçage;;0,115;m2;;;;Catalogue GO-SO
+Peintures;Travaux d'application sur textures à peindre à support intissé;1 couche de peinture mate en phase aqueuse au rouleau sur papier intissé à texture lisse, compris léger ponçage;;0,112;m2;;;;Catalogue GO-SO
+Peintures;Travaux complets sur subjectile plaque de plâtre;Peinture mate en phase aqueuse au rouleau, travaux complets finition C, sur parement vertical, comprenant: époussetage, impression et couche de finition;;0,12;m2;;;;Catalogue GO-SO
