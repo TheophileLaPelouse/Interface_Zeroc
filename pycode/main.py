@@ -9,14 +9,20 @@ Created on Mon Dec 11 14:48:00 2023
 from data.extractifc import ifc2csv
 from data.tridonnees import create_dico, json_adresse
 from model.colonnes import gencol, genmodel, to_json
+import os
 
 # csv_traitement = 'ptitraitement.csv'
-csv_traitement = '/home/theophile/Documents/Projet G1-G2/TRAITEMENT.csv'
-csv_ifc = '/home/theophile/Documents/Projet G1-G2/propriétés.csv'
-csv_meth = '/home/theophile/Documents/Projet G1-G2/construction.csv'
+csv_traitement = '../Files/TRAITEMENT.csv'
+csv_ifc = '../Files/traite/propriétés.csv'
+csv_meth = '../Files/construction.csv'
 adresse = "Avenue Paul Langevin Villeneuve-d'Ascq"
-def run(ifc, csv_ifc, csv_traitement, csv_meth, adresse, path_adresse = "/home/theophile/Documents/Projet G1-G2/adresses.json", **kwargs) :
-    # ifc2csv(ifc, csv_ifc)
+def run(csv_ifc, csv_traitement, csv_meth, adresse, path_adresse = "/home/theophile/Documents/Projet G1-G2/adresses.json", **kwargs) :
+    try : 
+        path_ifc = os.listdir('../Files/non_traite')[0]
+    except : 
+        print("Erreur fichier non reçu")
+        return(-1)
+    # ifc2csv(path_ifc, csv_ifc)
     print("Création du dictionnaire")
     DICO, dic_adresse_vu, dico_adresse = create_dico(csv_traitement, csv_ifc, csv_meth, adresse)
     print("Fin de création du dictionnaire")
@@ -35,4 +41,5 @@ def run(ifc, csv_ifc, csv_traitement, csv_meth, adresse, path_adresse = "/home/t
     Il faudra rajouter la partie cout marginal et tout 
     """
     to_json(prob, Obj, DICO, Nbpat, LPIECE, transcription)
-    
+    print("Sucess !")
+    return(1)
