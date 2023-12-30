@@ -254,7 +254,7 @@ def create_dico(csv_traitement, csv_ifc, csv_meth, adresse,
         
     for typ in dico_type: 
         n = len(dico_type[typ])
-        th_utile = (typ == 'mur_exte')
+        th_utile = not (typ == 'mur_inte')
         c_mat, c_iso = LMAT[typ]
         lmat, liso = [], []
         def lmatiso(l, c) : 
