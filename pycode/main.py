@@ -49,7 +49,7 @@ def run(csv_ifc, csv_traitement, csv_meth, adresse,
     
     tic = tac
     json_adresse(dic_adresse_vu, path=path_adresse)
-    Nbpat = [15, 15, 15, 15]
+    Nbpat = [10, 10, 10, 10]
     print('génération des patterns')
     print('Nbpat = ', Nbpat)
     xtot, tup_valid, indicemat, ind_pat, LPIECE, matindice = gencol(DICO, Nbpat)
@@ -70,10 +70,10 @@ def run(csv_ifc, csv_traitement, csv_meth, adresse,
     """
     Il faudra rajouter la partie cout marginal et tout 
     """
-    to_json(prob, Obj, DICO, Nbpat, LPIECE, transcription, path=os.path.join('../Files/Resultats/', os.path.basename(path_ifc)[:-3] + 'json'))
+    to_json(prob, Obj, DICO, Nbpat, LPIECE, transcription, dic_adresse_vu, path=os.path.join('../Files/Resultats/', os.path.basename(path_ifc)[:-3] + 'json'))
     tac = time.time()
     print("Sucess ! , temps de traitement = %f s" % abs(tic - tac))
-    return(DICO, xtot, tup_valid, indicemat, ind_pat, LPIECE, matindice)
+    return(DICO, xtot, tup_valid, indicemat, ind_pat, LPIECE, matindice, prob, Obj, Nbpat)
 
 
 

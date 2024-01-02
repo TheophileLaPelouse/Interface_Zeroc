@@ -87,7 +87,6 @@ my_colnames += ["y_%s_%s" % (k, j) for k in range(pos) for j in range(meth)]
 -----------------------------
 
 """
-
 class colonne : 
     # def __init__(self, tab_piece, dico_type, dico_mat, dTh = 15, dTe = 5, tempsh = 30*24*60*60*6, tempse = 30*24*60*60*6, Emax = 10**9) :
     #     self.truc = 0
@@ -147,7 +146,7 @@ class colonne :
         self.rth = rpara(Rth)
         
     def isvalid(self, dTh, dTe, tempsh, tempse, Emax) :
-        print('rth = ', self.rth)
+        # print('rth = ', self.rth)
         return(self.rth*(dTh*tempsh + dTe*tempse) > 0.01) # Ne pas oublier de le remettre bien
                
             
@@ -173,7 +172,6 @@ class Piece :
                 else : 
                     self.matid.append(lmat[i])
                     self.mat.append(dico['mat'][dico['indicemat'][lmat[i]]])
-        etot = 0
         permutation = rd.permutation(nbcouche)
         self.e = [0 for k in range(nbcouche)]
         if not isinstance(emax, float) :
@@ -182,10 +180,14 @@ class Piece :
             except : 
                 print('warning problème de emax')
                 emax = 0
-        for k in permutation :
-            ei = rd.random()*(emax - etot)
-            etot += ei
+        etot = emax + (rd.random()-0.5)*2/10*emax
+        reste = 1
+        for k in permutation[:-1] :
+            prop = rd.random()*reste
+            reste = reste - prop
+            ei = prop*etot
             self.e[k] = ei
+        self.e[permutation[-1]] = reste*etot
         
         if mat != [] :
             self.mat = mat
@@ -206,8 +208,10 @@ class Piece :
         self.S = dim
         self.qmatv = dict()
         for k in range(nbcouche) :
-            self.qmatv[self.matid[k]] = self.e[k]*self.S # quantité volumique
-        
+            self.qmatv[self.matid[k]] = self.S*self.e[k]
+    
+    def update_S(self, surface) : 
+        self.S = surface
             
         
             
@@ -262,12 +266,12 @@ def gencol(dico, Nbpat) :
             [lmat, liso] = dico["type"][typ]
             [pos, emax, dim, th_utile, mat, e] = dico["piece"][typ][0] # de base, mat et e ne sont pas défini
             piece = Piece(dico, lmat, liso, [], pos, typ, emax, dim, th_utile, mat = mat, e = e)
-            print(piece.mat)
+            # print(piece.mat)
             Lpiece.append(piece)
             n_mat = len(piece.mat)
             for i in ind_pat[ityp] :
                 for j in range(n_mat) :
-                    print(k, i, j)
+                    # print(k, i, j)
                     x[k][i][indicemat[piece.matid[j]]] = piece.e[j]
         return(Lpiece)
     
@@ -295,20 +299,27 @@ def gencol(dico, Nbpat) :
     #                         tup_valid[k1, k2, k3, k4, k5] = 1 
     # print(len(LPIECE), len(LPIECE[0]))
     # print(LPIECE[3])
+    
     for k1 in range(Nbpat[0]) :
         for k2 in range(Nbpat[1]) :
             for k3 in range(Nbpat[2]) :
                 for k4 in range(Nbpat[3]) :
                     K = [k1, k2, k3, k4]
                     # Lpiece = somme_t([LPIECE[i][K[i]] for j in ind_pat[i] for i in range(n_type)])
-                    for i in range(n_type) :
-                        print(i, K[i], len(LPIECE[i]))
+                    # for i in range(n_type) :
+                    #     print(i, K[i], len(LPIECE[i]))
                     Lpiece = [LPIECE[i][K[i]] for j in ind_pat[i] for i in range(n_type)]
+                    for i in range(n_type) :
+                        for j in ind_pat[i] : 
+                            j2 = j - ind_pat[i][0]
+                            surface = dico['piece'][types[i]][j2][2]
+                            LPIECE[i][K[i]].update_S(surface)
+                            Lpiece.append(LPIECE[i][K[i]])
                     # print([LPIECE[i][K[i]] for j in ind_pat[i] for i in range(n_type)])
                     # print(Lpiece)
                     col = colonne(Lpiece, dico["mat_energie"])
-                    print(col.valid)
-                    if col.valid :
+                    # print(col.valid)
+                    if col.valid or True:
                         tup_valid[k1, k2, k3] = 1 
                         
     
@@ -496,7 +507,7 @@ def genmodel(dico, x, xbool, tup_valid, Nbpat, path = 'model.lp') :
         for j in range(Nbpat[1]) :
             for i in range(Nbpat[2]) :
                 for p in range(Nbpat[3]) :
-                    print(tup_valid[k][j][i][p])
+                    # print(tup_valid[k][j][i][p])
                     row = [[["pattern_p_%d" % k, "pattern_s_%d" % j, "pattern_m_%d" % i, "pattern_m_i_%d" % p], 
                             [1 for count in range(4)]]]
                     rhs = [3+tup_valid[k][j][i][p]]
@@ -507,8 +518,9 @@ def genmodel(dico, x, xbool, tup_valid, Nbpat, path = 'model.lp') :
     for j in range(matv) :
     
         # sum(p in pos, k in T) pattern[k]*x[p][j]*surface[p]/dens_mat[j] <= qmat[j] for j in mat
-        s = sum(x[k][p][j]*dico['surface'][p]/dico['dens_mat'][j] for k in range(nbpat) for p in range(piece))
-        row = [[dvar_pat + dvar_mat, [s for k in range(nbpat)] + [-1 for m in range(matv)]]]
+        s = sum(x[k][p][j]*dico['surface'][p] for k in range(nbpat) for p in range(piece))
+        # print("\n", s, '\n')
+        row = [[dvar_pat + ["qmat_%d" % j], [s for k in range(nbpat)] + [-1]]]
         rhs = [0] 
         rowname = ["qmat_x"]
         prob.linear_constraints.add(lin_expr=row, senses="L", rhs=rhs, names=rowname)
@@ -552,7 +564,7 @@ def genmodel(dico, x, xbool, tup_valid, Nbpat, path = 'model.lp') :
             prob.linear_constraints.add(lin_expr=row, senses=sense, rhs=rhs, names=rowname)
         
         for pr in range(prod) :
-            row = [[["lieu_prod_%d_%d" % (pr, j)], [1]]]
+            row = [[["lieu_prod_%d_%d" % (pr, j)], [0.01]]]
             rhs = [dico["dist_prod"][pr][j]]
             sense = "L"
             rowname = ["lieu de production disponible"]
@@ -628,7 +640,7 @@ def genmodel(dico, x, xbool, tup_valid, Nbpat, path = 'model.lp') :
 #%% Sauvegarde des résultats
 
 
-def to_json(prob, Obj, dico, Nbpat, LPIECE, transcription, path="/home/theophile/Documents/Projet G1-G2/bonjour.json") :
+def to_json(prob, Obj, dico, Nbpat, LPIECE, transcription, dic_adresse_vu, path="/home/theophile/Documents/Projet G1-G2/bonjour.json") :
     c = 0
     for s in dico['surface'] : 
         if not isinstance(s, float) :
@@ -679,7 +691,6 @@ def to_json(prob, Obj, dico, Nbpat, LPIECE, transcription, path="/home/theophile
         for i in range(n) :
             var = prob.solution.get_values([k for k in I[i]])
             obj = [Obj[k] for k in I[i]]
-            print("bonjour \n", var)
             d_energie[L[i]] = sum(var[k]*obj[k] for k in range(len(I[i])))
         return
     
@@ -704,7 +715,7 @@ def to_json(prob, Obj, dico, Nbpat, LPIECE, transcription, path="/home/theophile
                         m  = 0
                     if m :
                         break 
-                dic["Methode"] = k
+                dic["Methode"] = dico['Methodes'][k]
                 
                 for k in range(Nbpat[j]) :
                     deb = transcription[Pat[j]]
@@ -712,10 +723,11 @@ def to_json(prob, Obj, dico, Nbpat, LPIECE, transcription, path="/home/theophile
                     if m :
                         break 
                 # Définir fonction
-                piece_retenue = fonction(i, LPIECE[j][k])
+                piece_retenue = LPIECE[j][k]
                 c = 0
+                dic["Matériaux"] = {}
                 for mat in piece_retenue.matid :
-                    dic["Matériaux"] = [mat, piece_retenue.e[c]]
+                    dic["Matériaux"][mat] = str(piece_retenue.e[c]) + 'm'
                     c += 1
             dpiece[Pat[j]] = dic
         return
@@ -723,18 +735,20 @@ def to_json(prob, Obj, dico, Nbpat, LPIECE, transcription, path="/home/theophile
     create_dpiece(dpiece, Pat, Nbpat)
     futur_json['Piece'] = dpiece 
     
-    dmat = dict()
+    dmat = {}
     
     def create_mat(dmat, ind_mat) :
         sdmat = dict()
         for j in ind_mat :
             qmat = prob.solution.get_values(j)
             if qmat > 0 :
-                sdmat[dico['mat_name'][j - ind_mat[0]]] = qmat 
+                sdmat[dico['mat_name'][j - ind_mat[0]]] = qmat
         dmat["Quantité"] = sdmat
         return
     
-    def create_mat2(dmat, I, L, indicemat):
+    l_adr = list(dic_adresse_vu.keys())
+    
+    def create_mat2(dmat, I, L, indicemat, l_adr):
         n = len(I)
         
         for i in range(n) :
@@ -743,18 +757,18 @@ def to_json(prob, Obj, dico, Nbpat, LPIECE, transcription, path="/home/theophile
                 for j in range(I[i]) :
                     var = prob.solution.get_values("lieu_prod_%d_%d" % (j, indicemat[mat]))
                     if var > 0 :
-                        sdmat[j] = var 
+                        sdmat[l_adr[j]] = str(var) + 'm2'
             dmat[L[i]] = sdmat
         return
     
     create_mat(dmat, ind_mat)
     I = [prod, dech]
     L = ["Site de Production", "Déchetterie"]
-    create_mat2(dmat, I, L, dico['indicemat'])
-    
-    sdmat = dict()
+    create_mat2(dmat, I, L, dico['indicemat'], l_adr)
+    sdmat = {}
     for mat in dmat["Quantité"] : 
         sdmat[mat] = dico["Emat"][dico['indicemat'][mat]]*dmat["Quantité"][mat]
+        dmat["Quantité"][mat] = str(dmat["Quantité"][mat]) + 'm2'
     dmat["Energie/Materiaux"] = sdmat
     futur_json['Matériaux'] = dmat
     
@@ -777,8 +791,6 @@ def pleinfor(n, nb, nargs, *args) :
             pleinfor(n-1, nb, nargs+1, *argu[k])
         
 
-def fonction(i, p) :
-    return(p)
  # Fonction qui détermine si th_utile
 
 # def th_utiles(self) :

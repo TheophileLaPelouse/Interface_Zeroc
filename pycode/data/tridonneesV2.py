@@ -367,6 +367,8 @@ def create_dico(csv_traitement, csv_ifc, csv_meth, adresse,
                 
     f_construct.close()
     
+    DICO['Methodes'] = l_meth
+    
     n_meth = len(DICO['Emet'])
     n_mat = len(DICO['mat'])
     n_adr = len(dic_adresse_vu)
@@ -380,7 +382,9 @@ def create_dico(csv_traitement, csv_ifc, csv_meth, adresse,
                 DICO['dist_prod'][j][k] = dic_adresse_vu[adr]
             j += 1 
         k += 1 
-        
+    
+    DICO['dist_prod'] = [[1000 for k in range(n_mat)] for j in range(n_adr)]
+    
     DICO['meth_mat'] = [[0 for k in range(n_meth)] for j in range(n_mat)]
     j = 0
     for cond in DICO['mat'] :
