@@ -2,7 +2,7 @@ import time
 from celery import shared_task, Task
 from celery.result import AsyncResult
 from flask import Blueprint, render_template, jsonify, request, current_app, redirect, send_from_directory
-from ex import calculate_exp, run_main 
+from .ex import calculate_exp, run_main 
 import os
 
 tasks_bp = Blueprint("tasks", __name__, url_prefix="/tasks")

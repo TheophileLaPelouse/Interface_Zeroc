@@ -6,9 +6,9 @@ Created on Mon Dec 11 14:48:00 2023
 @author: theophile
 """
 
-from data.extractifc import ifc2csv
-from data.tridonneesV2 import create_dico, json_adresse, create_adresses
-from model.colonnes import gencol, genmodel, to_json
+from .data.extractifc import ifc2csv
+from .data.tridonneesV2 import create_dico, json_adresse, create_adresses
+from .model.colonnes import gencol, genmodel, to_json
 import os
 import time
 

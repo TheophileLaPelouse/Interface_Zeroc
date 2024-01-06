@@ -1,8 +1,8 @@
 from flask import Flask, render_template, send_file, jsonify
 from celery import Celery
 from celery_init_app import celery_init_app
-from tasks import tasks_bp
-from views import main_bp
+from flaskcode.tasks import tasks_bp
+from flaskcode.views import main_bp
 
 
 def create_app() -> Flask:
@@ -21,7 +21,7 @@ def create_app() -> Flask:
     def index() -> str:
         return render_template("Zeroc.html")
 
-    import views
+    # import views
 
     app.register_blueprint(main_bp)
     app.register_blueprint(tasks_bp)

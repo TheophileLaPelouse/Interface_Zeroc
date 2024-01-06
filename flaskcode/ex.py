@@ -5,8 +5,8 @@ import sys
 from flask import current_app
 import os
 
-sys.path.append("/home/theophile/Documents/Projet G1-G2/pycode")
-import main
+#sys.path.append("/home/theophile/Documents/Projet G1-G2/pycode")
+from .pycode.main import run
 
 @shared_task(bind = True, ignore_result=False)
 def calculate_exp(self: Task):
@@ -25,5 +25,5 @@ def run_main(self: Task, adresse) :
     csv_meth = '/home/theophile/Documents/Projet G1-G2/construction.csv'
     print(adresse, "bonjour")
     ifc = os.listdir("/home/theophile/Documents/Projet G1-G2/site_web_zeroc/Files/non_traite")[0]
-    main.run(ifc, csv_ifc, csv_traitement, csv_meth, adresse)
+    run(ifc, csv_ifc, csv_traitement, csv_meth, adresse)
     return

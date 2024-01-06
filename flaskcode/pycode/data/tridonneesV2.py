@@ -12,10 +12,10 @@ On va revoir le code tridonnees en faisant une classe arborescence qui sera giga
 
 import pandas as pd
 import re 
-import data.Programme_des_distances as dist
+from . import Programme_des_distances as dist
 import csv
 import os
-#from extractifc import ifc2csv
+# from .extractifc import ifc2csv
 import json
 import numpy as np
 
