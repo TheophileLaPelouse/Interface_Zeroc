@@ -4,39 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../static/css/headerfooter.css">
-    <link rel="stylesheet" href="../static/css/derniereEtape.css">
+    <link rel="stylesheet" href="/static/css/headerfooter.css">
+    <link rel="stylesheet" href="/static/css/Zeroc.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <style> #map {
+        height: 500px;
+        margin-top: 20px;    /* Marge en haut */
+        margin-bottom: 20px; /* Marge en bas */
+        margin-left: 100px;   /* Marge à gauche */
+        margin-right: 100px;  /* Marge à droite */
+        position: relative;  /* Ajoutez cette propriété pour utiliser z-index */
+        z-index: 0;
+        }
+        .menu-bar {
+        position: relative;  /* Ajoutez cette propriété pour utiliser z-index */
+        z-index: 1;          /* Une valeur supérieure pour le header */
+        }
+    </style>
+       <style>
+       
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 700px; /* Limiter la largeur du tableau à 700px */
+            margin-bottom: 40px;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 40px; /* Ajouter une marge inférieure de 40px */
+        }
 
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightgray; /* Couleur de fond gris clair */
+            transition: background-color 0.3s; /* Ajouter une transition pour une animation en douceur */
+        }
+
+        th:hover {
+            background-color: darkgray; /* Couleur de fond plus foncée au survol */
+        }
+
+        .sub-table {
+            display: none;
+        }
+
+        .dropdown-title:hover {
+            cursor: pointer;
+            background-color: lightgray;
+        }
+    </style>
+    
 </head>
 <body>
     <nav class="menu-bar">
         <ul>
             <img src="logoZeroc.png" style="width: 40px; height: 25px"> <p class="logo"> ZEROC</p>
             <li><a id = "/Zeroc" href = "Zeroc.html">Accueil</a></li>
-            <li><a href = "simu.html">Lancer une simulation</a></li>
+            <li><a href = "lancersimulation.html">Lancer une simulation</a></li>
             <li><a id = "/infos" href = "infos.html">Qui sommes-nous ?</a></li>
-            <li><p> <img src="img/utilisateur.png" style="height:20px; width: 20px">Connexion</p></li>
+            <li><p> <img src="utilisateur.png" style="height:20px; width: 20px">Connexion</p></li>
         </ul>
     </nav>
     <br><br><br><br><br>
     <div class="resultat"> 
         <h1> Résultats de la simulation</h1>
     </div>
-    <br> <br>
-    <div class="zoneResultat"><p>bonjour, ça arrive <br> à afficher les résultats ici</p></div>
-    <a href="/tasks/download/bonjour.json" download="bonjour.json">Save json to your computer</a>
-    <a href="/tasks/download/model.lp" download="model.lp">Save model to your computer</a>
+    
+    <div id="map"></div>
 
-    <div class="upload-container">
-        <button type="button" class="upload-button">
-          <img src="img/arrow.png" alt="Flèche d'upload">
-        </button>
-        <div class="upload-area">
-          <input type="file" name="file" accept=".ifc"/>
-        </div>
-      </div>
-      <script src="../scripts/etape3"></script>
-    <br><br><br><br>
+    <script>
+        // Votre fichier JSON
+        var jsonData = 
+         {
+            "Energie": {
+                "Total": 0.015684564706214852,
+                "Methodes": 0.0,
+                "Materiaux": 0.00784228235310743,
+                "Sites de Production (transport)": 0.007842282353107423,
+                "Dechetteries (transport)": 0.0,
+                "temps d'utilisation": 0.0
+            },
+            "Piece": {
+                "mur": {"Methode": 0, "Mat\u00e9riaux": ["acier", 0.00784228235310743]},
+                "sol": {"Methode": 0, "Mat\u00e9riaux": ["acier", 0.026652003085026466]},
+                "plafond": {"Methode": 0, "Mat\u00e9riaux": ["acier", 0.0029223401487645964]}
+            },
+            "Materiaux": {
+                "Quantite": 0.00784228235310743,
+                "Site de Production": 0.007842282353107423,
+                "Dechetterie": 0.007842282353107423,
+                "Energie/Materiaux": 0.00784228235310743
+            }
+        };
+    
+        function createEnergieTable(data) {
+            var table = document.createElement('table');
+            var thead = table.createTHead();
+            var tbody = table.createTBody();
+    
+            // Titre
+            var titleRow = thead.insertRow();
+            var titleCell = titleRow.insertCell();
+            titleCell.colSpan = 2;
+            titleCell.innerText = "Energie";
+            titleCell.className = 'dropdown-title';
+    
+            // Données
+            for (var category in data) {
+                var row = tbody.insertRow();
+                var categoryCell = row.insertCell(0);
+                var valueCell = row.insertCell(1);
+    
+                categoryCell.innerText = category;
+                valueCell.innerText = data[category];
+            }
+    
+            document.body.appendChild(table);
+        }
+    
+        function createPieceTable(data) {
+            var table = document.createElement('table');
+            var thead = table.createTHead();
+            var tbody = table.createTBody();
+    
+            // Titre
+            var titleRow = thead.insertRow();
+            var titleCell = titleRow.insertCell();
+            titleCell.colSpan = 3;
+            titleCell.innerText = "Piece";
+            titleCell.className = 'dropdown-title';
+    
+            // Données
+            var headerRow = tbody.insertRow();
+            var categories = ["", "Methode", "Matériaux"];
+            categories.forEach(function (category, index) {
+                var headerCell = headerRow.insertCell(index);
+                headerCell.innerText = category;
+            });
+    
+            // Ajouter les données pour Pièce
+            for (var pieceCategory in data) {
+                var row = tbody.insertRow();
+                var categoryCell = row.insertCell(0);
+                var methodCell = row.insertCell(1);
+                var materialCell = row.insertCell(2);
+    
+                categoryCell.innerText = pieceCategory;
+    
+                // Récupérer la Méthode correspondante dans le JSON
+                methodCell.innerText = data[pieceCategory]["Methode"];
+    
+                // Récupérer les Matériaux correspondants dans le JSON
+                var materials = data[pieceCategory]["Mat\u00e9riaux"];
+                materialCell.innerText = materials.join(", ");
+            }
+    
+            document.body.appendChild(table);
+        }
+    
+        function createMateriauxTable(data) {
+            var table = document.createElement('table');
+            var thead = table.createTHead();
+            var tbody = table.createTBody();
+    
+            // Titre
+            var titleRow = thead.insertRow();
+            var titleCell = titleRow.insertCell();
+            titleCell.colSpan = 2;
+            titleCell.innerText = "Materiaux";
+            titleCell.className = 'dropdown-title';
+    
+            // Données
+            for (var category in data) {
+                var row = tbody.insertRow();
+                var categoryCell = row.insertCell(0);
+                var valueCell = row.insertCell(1);
+    
+                categoryCell.innerText = category;
+                valueCell.innerText = data[category];
+            }
+    
+            document.body.appendChild(table);
+        }
+    
+        // Créer les tableaux
+        createEnergieTable(jsonData["Energie"]);
+        createPieceTable(jsonData["Piece"]);
+        createMateriauxTable(jsonData["Materiaux"]);
+    </script>
+   
     
 </body>
 <footer>
@@ -66,12 +231,57 @@
         </div>
         <div class="blockdroite">
             <p class="titrefooter"> CONTACT</p><br>
-            <img src="{{ url_for('static', filename='img/mail.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
-            <img src="{{ url_for('static', filename='img/logofacebook.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
-            <img src="{{ url_for('static', filename='img/logoinstagram.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
-            <img src="{{ url_for('static', filename='img/logotwitter.png')}}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="mail.png" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="logofacebook.png" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="logoinstagram.png" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="logotwitter.png" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
             <p> FAQ</p>
+           
         </div>
     </div>
 </footer>
+
+<script>
+   
+    fetch('/Fichiers/Resultats/adresses.json')
+.then(function(response) {
+  return response.json(); // Convertit le contenu du fichier JSON en tableau JavaScript
+})
+.then(function(addresses) {
+  var map = L.map('map').setView([50.633333, 3.066667], 10); // Centrer la carte arbitrairement
+
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+
+  addresses.forEach(function(address) {
+    // Remplacer par l'URL de votre API de géocodage préférée
+    var geocodingUrl = `https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(address)}`;
+
+
+    fetch(geocodingUrl)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(geocodeData) {
+      if (geocodeData.length > 0) {
+        var latLng = [geocodeData[0].lat, geocodeData[0].lon];
+        L.marker(latLng).addTo(map).bindPopup(address);
+      } else {
+        console.log('Géocodage échoué pour l\'adresse:', address);
+      }
+    })
+    .catch(function(error) {
+      console.error('Erreur lors du géocodage:', error);
+    });
+  });
+})
+.catch(function(error) {
+  console.error('Erreur lors de la récupération des adresses:', error);
+});
+</script>
+
 </html>
