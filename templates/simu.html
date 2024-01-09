@@ -29,26 +29,9 @@
         <div class="texte">
             <p> Pour utiliser les données de votre fichier Revit, il faut que vous ayez au préalable converti votre fichier au format IFC. Pour cela, il vous suffit d'ouvrir votre fichier sur Revit puis d'aller dans Fichier > Exporter> IFC. 
                 <br><br>Si vous avez des difficultés nous vous invitons à consulter <a href="https://www.autodesk.fr/campaigns/interoperability/ifc-guide">ce site.</a> </p> <br>
-        </div>
-        <div class="bouton">
-            <button> input type="file" accept=".ifc" hidden> Uploadez mon fichier Revit</button>
-       </div>
         
         <br>
 
-        <h1>Résultats de la simulation</h1>
-        <p id="result_placeholder">Résultats :</p>
-        <button id="calculate_exp_button">Lancer le calcul</button>
-
-        <script>
-            document.getElementById("calculate_exp_button").addEventListener("click", function () {
-                fetch('/tasks/calculate_exp_result', { method: 'POST' })
-                    .then(response => response.json())
-                    .then(data => {
-                        document.getElementById("result_placeholder").innerText = `Result: ${data.status}`;
-                    });
-            });
-        </script>
         
         <br>  
         <div class="fichier">
@@ -81,6 +64,20 @@
         </div>
         <br><br>
 
+        <h1>Résultats de la simulation</h1>
+        <p id="result_placeholder">Résultats :</p>
+        <button id="calculate_exp_button">Lancer le calcul</button>
+
+        <script>
+            document.getElementById("calculate_exp_button").addEventListener("click", function () {
+                fetch('/tasks/calculate_exp_result', { method: 'POST' })
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById("result_placeholder").innerText = `Result: ${data.status}`;
+                    });
+            });
+        </script>
+        
    <!--     <div class="imagelocalisation">
             <img src="img/localisation.jpg" style="width: 500px; height: 400px"> <br>
             Photo de <a href="https://unsplash.com/fr/@hjkp?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">henry perks</a> sur <a href="https://unsplash.com/fr/photos/pessoa-segurando-smartphone-preto-BJXAxQ1L7dI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
