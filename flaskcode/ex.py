@@ -6,7 +6,7 @@ from flask import current_app
 import os
 
 #sys.path.append("/home/theophile/Documents/Projet G1-G2/pycode")
-from .pycode.main import run
+from .pycode.main import run, l_cat_iso, l_cat_mat
 
 @shared_task(bind = True, ignore_result=False)
 def calculate_exp(self: Task):
@@ -20,10 +20,8 @@ def calculate_exp(self: Task):
 @shared_task(bind = True, ingore_result=False)
 def run_main(self: Task, adresse) :
     print("couquecemarcepas?")
-    csv_traitement = '/home/theophile/Documents/Projet G1-G2/TRAITEMENT.csv'
-    csv_ifc = '/home/theophile/Documents/Projet G1-G2/propriétés.csv'
-    csv_meth = '/home/theophile/Documents/Projet G1-G2/construction.csv'
+    csv_traitement = 'files/TRAITEMENTpropre.csv'
+    csv_meth = 'files/construction.csv'
     print(adresse, "bonjour")
-    ifc = os.listdir("/home/theophile/Documents/Projet G1-G2/site_web_zeroc/Files/non_traite")[0]
-    run(ifc, csv_ifc, csv_traitement, csv_meth, adresse)
+    run(csv_traitement, csv_meth, adresse)
     return

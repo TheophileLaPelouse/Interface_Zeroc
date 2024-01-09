@@ -13,17 +13,17 @@ import os
 import time
 
 # csv_traitement = 'ptitraitement.csv'
-csv_traitement = '../Files/TRAITEMENTpropre.csv'
-csv_ifc = '../Files/traite/propriétés.csv'
-csv_meth = '../Files/construction.csv'
-adresse = "Avenue Paul Langevin Villeneuve-d'Ascq"
+# csv_traitement = '../Files/TRAITEMENTpropre.csv'
+# csv_ifc = '../Files/traite/propriétés.csv'
+# csv_meth = '../Files/construction.csv'
+# adresse = "Avenue Paul Langevin Villeneuve-d'Ascq"
 l_cat_mat = [['Cloisonnement'], ['Cloisonnement'], ['Cloisonnement'], ['Cloisonnement']]
 l_cat_iso = [['Isolants thermiques et acoustiques pour murs (ITE)', 'Isolants thermiques et acoustiques pour murs (ITI)'], 
              ['Isolants thermiques et acoustiques pour murs (ITE)', 'Isolants thermiques et acoustiques pour murs (ITI)'], 
              ['Isolants thermiques et acoustiques pour murs (ITE)', 'Isolants thermiques et acoustiques pour murs (ITI)'], 
              ['Isolants thermiques et acoustiques pour murs (ITE)', 'Isolants thermiques et acoustiques pour murs (ITI)']]
 
-def run(csv_ifc, csv_traitement, csv_meth, adresse, 
+def run(csv_traitement, csv_meth, adresse, l_cat_iso = l_cat_iso, l_cat_mat=l_cat_mat,
         path_adresse = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../Files/Resultats/adresses.json'), dic_adresse_vu = None) :
     
     tic = time.time()

@@ -59,7 +59,7 @@ def calculate_exp_result():
 def upload() :
     file = request.files['ifcfile']
     if file.filename != "" :
-        path = "/home/theophile/Documents/Projet G1-G2/site_web_zeroc/Files/non_traite"
+        path = "files/non_traite"
         print(os.path.join(path, os.path.basename(file.filename)))
         file.save(os.path.join(path, os.path.basename(file.filename)))
     return redirect('../simu.html')
