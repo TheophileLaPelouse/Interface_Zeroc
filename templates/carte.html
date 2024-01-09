@@ -43,11 +43,11 @@
         <h1> Résultats de la simulation</h1>
     </div>
             </button>
-             <script>
+             script>
                  document.getElementById("launcher").addEventListener("click", function () {
                      fetch('/tasks/run_calc', { method: 'POST' });
                  });
-             </script>
+             /script>
         </div>
         <br>
         
@@ -113,6 +113,7 @@
   addresses.forEach(function(address) {
     // Remplacer par l'URL de votre API de géocodage préférée
     var geocodingUrl = `https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(address)}`;
+    console.log(geocodingUrl)
 
 
     fetch(geocodingUrl)

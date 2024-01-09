@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Résultats</title>
     <link rel="stylesheet" href="/static/css/headerfooter.css">
     <link rel="stylesheet" href="/static/css/Zeroc.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -67,7 +67,7 @@
 <body>
     <nav class="menu-bar">
         <ul>
-            <img src="logoZeroc.png" style="width: 40px; height: 25px"> <p class="logo"> ZEROC</p>
+            <img src="{{ url_for('static', filename='img/logoZeroc.png') }}" style="width: 40px; height: 25px"> <p class="logo"> ZEROC</p>
             <li><a id = "/Zeroc" href = "Zeroc.html">Accueil</a></li>
             <li><a href = "lancersimulation.html">Lancer une simulation</a></li>
             <li><a id = "/infos" href = "infos.html">Qui sommes-nous ?</a></li>
@@ -80,7 +80,6 @@
     </div>
     
     <div id="map"></div>
-
     <script>
         // Votre fichier JSON
         function loadJSON(callback) {
@@ -232,10 +231,10 @@
         </div>
         <div class="blockdroite">
             <p class="titrefooter"> CONTACT</p><br>
-            <img src="mail.png" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
-            <img src="logofacebook.png" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
-            <img src="logoinstagram.png" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
-            <img src="logotwitter.png" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="{{ url_for('static', filename='img/mail.png') }}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="{{ url_for('static', filename='img/logofacebook.png') }}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="{{ url_for('static', filename='img/logoinstagram.png') }}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
+            <img src="{{ url_for('static', filename='img/logotwitter.png') }}" style="max-width: 25px; max-height: 25px; border-radius: 50%;">
             <p> FAQ</p>
            
         </div>

@@ -3,6 +3,7 @@ from celery import Celery
 from celery_init_app import celery_init_app
 from flaskcode.tasks import tasks_bp
 from flaskcode.views import main_bp
+from flask_cors import CORS
 
 
 def create_app() -> Flask:
@@ -30,6 +31,7 @@ def create_app() -> Flask:
     return app
 
 app = create_app()
+CORS(app)
 
 if __name__ == "__main__":
     app.run(debug=True, )
