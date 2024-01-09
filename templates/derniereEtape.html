@@ -71,7 +71,7 @@
             <li><a id = "/Zeroc" href = "Zeroc.html">Accueil</a></li>
             <li><a href = "lancersimulation.html">Lancer une simulation</a></li>
             <li><a id = "/infos" href = "infos.html">Qui sommes-nous ?</a></li>
-            <li><p> <img src="utilisateur.png" style="height:20px; width: 20px">Connexion</p></li>
+            <li><p> <img src="{{ url_for('static', filename='img/utilisateur.png') }}" style="height:20px; width: 20px">Connexion</p></li>
         </ul>
     </nav>
     <br><br><br><br><br>
@@ -83,28 +83,22 @@
 
     <script>
         // Votre fichier JSON
-        var jsonData = 
-         {
-            "Energie": {
-                "Total": 0.015684564706214852,
-                "Methodes": 0.0,
-                "Materiaux": 0.00784228235310743,
-                "Sites de Production (transport)": 0.007842282353107423,
-                "Dechetteries (transport)": 0.0,
-                "temps d'utilisation": 0.0
-            },
-            "Piece": {
-                "mur": {"Methode": 0, "Mat\u00e9riaux": ["acier", 0.00784228235310743]},
-                "sol": {"Methode": 0, "Mat\u00e9riaux": ["acier", 0.026652003085026466]},
-                "plafond": {"Methode": 0, "Mat\u00e9riaux": ["acier", 0.0029223401487645964]}
-            },
-            "Materiaux": {
-                "Quantite": 0.00784228235310743,
-                "Site de Production": 0.007842282353107423,
-                "Dechetterie": 0.007842282353107423,
-                "Energie/Materiaux": 0.00784228235310743
+        function loadJSON(callback) {
+        var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+
+        var jsonPath = "{{ url_for('static', filename='json/test.json') }}"
+	console.log(jsonPath)
+        xobj.open('GET', jsonPath, true);
+	console.log(xobj)
+        xobj.onreadystatechange = function () {
+            if (xobj.readyState == 4 && xobj.status == "200") {
+                // Callback avec le contenu JSON
+                callback(JSON.parse(xobj.responseText));
             }
         };
+        xobj.send(null);
+    }
     
         function createEnergieTable(data) {
             var table = document.createElement('table');
@@ -165,7 +159,8 @@
     
                 // Récupérer les Matériaux correspondants dans le JSON
                 var materials = data[pieceCategory]["Mat\u00e9riaux"];
-                materialCell.innerText = materials.join(", ");
+                console.log(materials)
+                materialCell.innerText = Object.keys(materials).join(", ");
             }
     
             document.body.appendChild(table);
@@ -197,9 +192,15 @@
         }
     
         // Créer les tableaux
+         loadJSON(function(jsonData) {
+        // Créer les tableaux avec les données JSON
         createEnergieTable(jsonData["Energie"]);
         createPieceTable(jsonData["Piece"]);
         createMateriauxTable(jsonData["Materiaux"]);
+    });
+        //createEnergieTable(jsonData["Energie"]);
+        //createPieceTable(jsonData["Piece"]);
+        //createMateriauxTable(jsonData["Materiaux"]);
     </script>
    
     
@@ -243,7 +244,7 @@
 
 <script>
    
-    fetch('/Fichiers/Resultats/adresses.json')
+    fetch('{{ url_for('static', filename='json/adresses.json') }}')
 .then(function(response) {
   return response.json(); // Convertit le contenu du fichier JSON en tableau JavaScript
 })
