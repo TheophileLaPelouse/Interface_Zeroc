@@ -6,6 +6,9 @@ h1 {
     font-weight:520;
 }
 
+.texte { 
+    text-align: center;
+}
 
 #zipcode-form {
     text-align: center;
